@@ -5,9 +5,8 @@ Inductive pos : Set :=
 Fixpoint plus(n m:pos) : pos :=
   match n with
   | SO => S m
-  | S p => S (p + m)
-  end
-where "n + m" := (plus n m).
+  | S p => S (plus p m)
+  end.
 
 Infix "+" := plus.
 
